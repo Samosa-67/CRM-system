@@ -1,3 +1,4 @@
+// CRM logic updated and improved
 const customerIdInput = document.getElementById("customerId");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
