@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Customer Relationship Management System</h1>
+      <p>Manage customers, purchases, and loyalty information in one place.</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="stat-card">
+        <h3>Total Customers</h3>
+        <p id="totalCustomers">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Purchases</h3>
+        <p id="totalPurchases">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Loyalty Points</h3>
+        <p id="totalLoyalty">0</p>
+      </div>
+    </section>
+
+    <main class="main-layout">
+      <section class="form-card">
+        <h2>Add / Update Customer</h2>
+
+        <input type="hidden" id="customerId" />
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter customer name" />
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter customer email" />
+
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone number" />
+
+        <label>Purchase Item</label>
+        <input type="text" id="purchaseItem" placeholder="Example: Laptop" />
+
+        <label>Purchase Amount (€)</label>
+        <input type="number" id="purchaseAmount" placeholder="Example: 250" />
+
+        <label>Loyalty Points</label>
+        <input type="number" id="loyaltyPoints" placeholder="Example: 50" />
+
+        <button id="saveBtn">Save Customer</button>
+        <button id="clearBtn" class="secondary-btn">Clear Form</button>
+      </section>
+
+      <section class="list-card">
+        <div class="list-header">
+          <h2>Customer Records</h2>
+          <input type="text" id="searchInput" placeholder="Search by name, email, or phone..." />
+        </div>
+
+        <div id="customerList" class="customer-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
