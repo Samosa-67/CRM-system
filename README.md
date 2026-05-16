@@ -6,7 +6,7 @@ This project is a web-based Customer Relationship Management (CRM) system develo
 
 The CRM system includes customer management functionality, dashboard analytics, revenue tracking, customer tier classification, and local storage integration. The project was developed using HTML, CSS, and JavaScript while following software engineering practices such as Jira Kanban workflow, GitHub version control, Clockify time tracking, and Essence Kernel evaluation.
 
----
+
 
 ## Features
 
@@ -20,7 +20,7 @@ The CRM system includes customer management functionality, dashboard analytics, 
 - Local storage integration
 - Responsive user interface
 
----
+
 
 ## Technologies Used
 
