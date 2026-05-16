@@ -1,73 +1,178 @@
-<!-- crm system updated -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRM System</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app">
-    <header>
-      <h1>Customer Relationship Management System</h1>
-      <p>Manage customers, purchases, and loyalty information in one place.</p>
-    </header>
 
-    <section class="dashboard">
-      <div class="stat-card">
-        <h3>Total Customers</h3>
-        <p id="totalCustomers">0</p>
-      </div>
-      <div class="stat-card">
-        <h3>Total Purchases</h3>
-        <p id="totalPurchases">0</p>
-      </div>
-      <div class="stat-card">
-        <h3>Total Loyalty Points</h3>
-        <p id="totalLoyalty">0</p>
-      </div>
+  <title>CRM System</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CHART.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>Customer Relationship Management System</h1>
+
+    <p>
+      Manage customers, purchases, and loyalty information in one place.
+    </p>
+  </header>
+
+  <!-- DASHBOARD -->
+
+  <section class="dashboard">
+
+    <div class="stat-card">
+      <h3>Total Customers</h3>
+      <p id="totalCustomers">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Total Purchases</h3>
+      <p id="totalPurchases">€0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Total Loyalty Points</h3>
+      <p id="totalLoyalty">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Monthly Revenue</h3>
+      <p id="monthlyRevenue">€0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Top Customer</h3>
+      <p id="topCustomer">None</p>
+    </div>
+
+  </section>
+
+  <!-- ANALYTICS SECTION -->
+
+  <section class="analytics-section">
+
+    <div class="chart-card">
+      <h2>Revenue Overview</h2>
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Top Customers</h2>
+      <canvas id="customerChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Customer Tier Distribution</h2>
+      <canvas id="tierChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h2>Monthly Revenue</h2>
+      <canvas id="monthlyRevenueChart"></canvas>
+    </div>
+
+  </section>
+
+  <!-- MAIN CONTENT -->
+
+  <main class="main-layout">
+
+    <!-- FORM -->
+
+    <section class="form-card">
+
+      <h2>Add / Update Customer</h2>
+
+      <input type="hidden" id="customerId" />
+
+      <label>Full Name</label>
+      <input
+              type="text"
+              id="name"
+              placeholder="Enter customer name"
+      />
+
+      <label>Email</label>
+      <input
+              type="email"
+              id="email"
+              placeholder="Enter customer email"
+      />
+
+      <label>Phone</label>
+      <input
+              type="text"
+              id="phone"
+              placeholder="Enter phone number"
+      />
+
+      <label>Purchase Item</label>
+      <input
+              type="text"
+              id="purchaseItem"
+              placeholder="Example: Laptop"
+      />
+
+      <label>Purchase Amount (€)</label>
+      <input
+              type="number"
+              id="purchaseAmount"
+              placeholder="Example: 250"
+      />
+
+      <label>Loyalty Points</label>
+      <input
+              type="number"
+              id="loyaltyPoints"
+              placeholder="Example: 50"
+      />
+
+      <button id="saveBtn">
+        Save Customer
+      </button>
+
+      <button id="clearBtn" class="secondary-btn">
+        Clear Form
+      </button>
+
     </section>
 
-    <main class="main-layout">
-      <section class="form-card">
-        <h2>Add / Update Customer</h2>
+    <!-- CUSTOMER LIST -->
 
-        <input type="hidden" id="customerId" />
+    <section class="list-card">
 
-        <label>Full Name</label>
-        <input type="text" id="name" placeholder="Enter customer name" />
+      <div class="list-header">
 
-        <label>Email</label>
-        <input type="email" id="email" placeholder="Enter customer email" />
+        <h2>Customer Records</h2>
 
-        <label>Phone</label>
-        <input type="text" id="phone" placeholder="Enter phone number" />
+        <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, email, or phone..."
+        />
 
-        <label>Purchase Item</label>
-        <input type="text" id="purchaseItem" placeholder="Example: Laptop" />
+      </div>
 
-        <label>Purchase Amount (€)</label>
-        <input type="number" id="purchaseAmount" placeholder="Example: 250" />
+      <div
+              id="customerList"
+              class="customer-list"
+      ></div>
 
-        <label>Loyalty Points</label>
-        <input type="number" id="loyaltyPoints" placeholder="Example: 50" />
+    </section>
 
-        <button id="saveBtn">Save Customer</button>
-        <button id="clearBtn" class="secondary-btn">Clear Form</button>
-      </section>
+  </main>
 
-      <section class="list-card">
-        <div class="list-header">
-          <h2>Customer Records</h2>
-          <input type="text" id="searchInput" placeholder="Search by name, email, or phone..." />
-        </div>
+</div>
 
-        <div id="customerList" class="customer-list"></div>
-      </section>
-    </main>
-  </div>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
