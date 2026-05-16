@@ -1,4 +1,3 @@
-/* CRM UI styling improved */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
 }
 
 .app {
-  max-width: 1250px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -25,7 +24,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
@@ -33,11 +32,13 @@ header p {
   color: #dbeafe;
 }
 
+/* DASHBOARD */
+
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .stat-card {
@@ -46,6 +47,11 @@ header p {
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.18);
   text-align: center;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
 }
 
 .stat-card h3 {
@@ -60,11 +66,48 @@ header p {
   color: #2563eb;
 }
 
+/* ANALYTICS SECTION */
+
+.analytics-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  min-height: 380px;
+  transition: 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+}
+
+.chart-card h2 {
+  margin-bottom: 18px;
+  color: #1e3a8a;
+  font-size: 1.2rem;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* MAIN LAYOUT */
+
 .main-layout {
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 25px;
 }
+
+/* FORM + LIST CARDS */
 
 .form-card,
 .list-card {
@@ -80,6 +123,8 @@ header p {
   color: #1e3a8a;
 }
 
+/* FORM */
+
 label {
   display: block;
   margin-top: 12px;
@@ -94,6 +139,7 @@ input {
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   font-size: 0.95rem;
+  transition: 0.2s ease;
 }
 
 input:focus {
@@ -101,6 +147,8 @@ input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
 }
+
+/* BUTTONS */
 
 button {
   width: 100%;
@@ -113,10 +161,12 @@ button {
   font-weight: bold;
   cursor: pointer;
   font-size: 1rem;
+  transition: 0.3s ease;
 }
 
 button:hover {
   background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .secondary-btn {
@@ -126,6 +176,8 @@ button:hover {
 .secondary-btn:hover {
   background: #475569;
 }
+
+/* LIST HEADER */
 
 .list-header {
   display: flex;
@@ -139,10 +191,14 @@ button:hover {
   margin-bottom: 0;
 }
 
+/* CUSTOMER LIST */
+
 .customer-list {
   display: grid;
   gap: 16px;
 }
+
+/* CUSTOMER CARD */
 
 .customer-card {
   border: 1px solid #e2e8f0;
@@ -150,41 +206,102 @@ button:hover {
   border-radius: 16px;
   padding: 18px;
   background: #f8fafc;
+  transition: 0.3s ease;
+}
+
+.customer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .customer-card h3 {
   color: #0f172a;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
+
+/* CUSTOMER INFO */
 
 .customer-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 10px;
   color: #475569;
   margin-bottom: 12px;
+}
+
+/* BADGES */
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .badge {
   display: inline-block;
   background: #dbeafe;
   color: #1e40af;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
   font-weight: bold;
-  margin-top: 5px;
 }
+
+/* CUSTOMER TIERS */
+
+.tier-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.bronze {
+  background: #d6a46b;
+  color: white;
+}
+
+.silver {
+  background: #94a3b8;
+  color: white;
+}
+
+.gold {
+  background: #facc15;
+  color: #111827;
+}
+
+.vip {
+  background: #7c3aed;
+  color: white;
+}
+
+/* PURCHASE HISTORY */
+
+.purchase-history-card {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.purchase-history-card p {
+  margin-bottom: 4px;
+}
+
+/* ACTION BUTTONS */
 
 .actions {
   display: flex;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .actions button {
   width: auto;
   margin-top: 0;
-  padding: 9px 14px;
+  padding: 10px 15px;
   font-size: 0.9rem;
 }
 
@@ -204,6 +321,8 @@ button:hover {
   background: #b91c1c;
 }
 
+/* EMPTY MESSAGE */
+
 .empty-message {
   text-align: center;
   color: #64748b;
@@ -212,8 +331,10 @@ button:hover {
   border-radius: 16px;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
-  .dashboard,
+
   .main-layout {
     grid-template-columns: 1fr;
   }
@@ -224,6 +345,10 @@ button:hover {
   }
 
   .customer-info {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-section {
     grid-template-columns: 1fr;
   }
 }
