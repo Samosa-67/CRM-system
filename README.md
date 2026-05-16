@@ -31,7 +31,7 @@ The CRM system includes customer management functionality, dashboard analytics, 
 - Jira
 - Clockify
 
----
+
 
 ## Development Approach
 
@@ -39,7 +39,7 @@ The project was developed using Agile and Kanban methodologies. Jira was used fo
 
 Clockify was used for PSP-based time tracking to monitor task progress and improve productivity throughout the project lifecycle.
 
----
+
 
 ## System Components
 
@@ -49,7 +49,7 @@ Clockify was used for PSP-based time tracking to monitor task progress and impro
 - Local Storage System
 - Responsive User Interface
 
----
+
 
 ## Project Management Tools
 
@@ -58,7 +58,7 @@ Clockify was used for PSP-based time tracking to monitor task progress and impro
 - Clockify for time logging
 - Discord
 
----
+
 
 ## Functional Requirements
 
@@ -72,7 +72,7 @@ The CRM system allows users to:
 - Manage customer loyalty information
 - View dashboard analytics and statistics
 
----
+
 
 ## Non-Functional Requirements
 
@@ -85,13 +85,13 @@ The system is designed to:
 - Maintain responsive design across devices
 - Support future scalability and improvements
 
----
+
 
 ## UML and ER Diagrams
 
 The project includes UML sequence diagrams and ER diagrams to represent system workflows, customer management processes, and database relationships.
 
----
+
 
 ## Testing and Quality Assurance
 
@@ -104,7 +104,7 @@ Testing activities included:
 - UI responsiveness testing
 - Bug fixing and debugging
 
----
+
 
 ## Future Improvements
 
@@ -117,7 +117,7 @@ Possible future enhancements include:
 - Advanced analytics dashboard
 - Multi-user support
 
----
+
 
 ## Team Members
 
@@ -127,7 +127,7 @@ Possible future enhancements include:
 - Sami Ullah
 - Hafiz Muhammad Anas
 
----
+
 
 ## Repository Information
 
@@ -141,7 +141,7 @@ This repository contains:
 - Jira workflow evidence
 - Clockify time tracking evidence
 
----
+
 
 ## Conclusion
 
